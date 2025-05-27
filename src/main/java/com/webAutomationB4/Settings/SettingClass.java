@@ -46,10 +46,8 @@ public class SettingClass {
     //closed driver after test case finish execution
     public static void tearDown() {
         if(driver!=null) {
-            driver.close();
             driver.quit();
         }
-
         settingClass = null;
     }
 

@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 
 //import
 import com.webAutomationB4.Settings.SettingClass;
-import org.testng.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -29,7 +29,7 @@ public class LoginPage {
     @Then("User should be see error message {string}")
     public void get(String expectedName) {
         String actualName = objLogin.getErrorMessage();
-        Assert.assertTrue(actualName.contains(expectedName));
+        Assertions.assertEquals(actualName, expectedName);
     }
 
 
