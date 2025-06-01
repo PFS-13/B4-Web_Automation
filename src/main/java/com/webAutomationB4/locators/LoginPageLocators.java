@@ -16,3 +16,4 @@ public class LoginPageLocators {
     @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/div[2]/div")
     public  WebElement errorMessage;
 }
+
