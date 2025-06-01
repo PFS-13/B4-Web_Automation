@@ -4,7 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class LoginPageLocators {
-    @FindBy(name = "username")
+    @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/form/div[1]/input")
     public WebElement userName;
 
     @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/form/div[2]/div/input")
@@ -21,8 +21,6 @@ public class LoginPageLocators {
 
     @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/div/p")
     public WebElement welcomeMessage;
-
-
 
     @FindBy(xpath = "/html/body/div[2]/div/div[2]/div/div/div[2]/div")
     public  WebElement errorMessage;
