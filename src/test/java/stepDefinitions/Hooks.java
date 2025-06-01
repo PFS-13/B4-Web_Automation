@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.After;
-import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import com.webAutomationB4.Settings.SettingClass;
 

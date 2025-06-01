@@ -6,9 +6,13 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/LoginPage.feature",
-        glue = "stepDefinitions",
-        plugin = {"pretty", "html:target/cucumber-report.html"},
+        features = "src/test/resources/features",
+        glue = {"stepDefinitions"},
+        plugin = {
+                "pretty",
+                "io.github.ghoshsumit.extentreport.ExtentReportsCucumber7Adapter"
+
+        },
         monochrome = true
 )
 public class CucumberRunnerTests {
