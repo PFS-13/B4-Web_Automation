@@ -10,8 +10,9 @@ import org.junit.runner.RunWith;
         glue = {"stepDefinitions"},
         plugin = {
                 "pretty",
-                "io.github.ghoshsumit.extentreport.ExtentReportsCucumber7Adapter"
-
+                "html:target/cucumber-reports.html",
+                "json:target/cucumber.json",
+                "junit:target/cucumber.xml"
         },
         monochrome = true
 )
