@@ -16,6 +16,16 @@ public class LoginPageActions {
         loginPage.loginButton.click();
     }
 
+    public String getLoginHeader() {
+        return loginPage.loginHeader.getText();
+    }
+
+    public String getWelcomeHeader() {
+        return loginPage.welcomeHeader.getText();
+    }
+
+
+
     public String getErrorMessage() {
         return loginPage.errorMessage.getText();
     }

@@ -1,24 +1,30 @@
 package stepDefinitions;
 import com.webAutomationB4.actions.LoginPageActions;
-import org.openqa.selenium.By;
 
 //import
 import com.webAutomationB4.Settings.SettingClass;
 import org.junit.jupiter.api.Assertions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginPage {
+public class LoginInvalid {
     LoginPageActions objLogin = new LoginPageActions();
 
-    @Given("User already access Zaidan URL {string}")
+    @Given("User access Zaidan URL {string}")
     public void navigateToWebApp(String url) {
-        //navigate to url website
         SettingClass.setUpDriver();
         SettingClass.openPage(url);
+    }
+    @Then("User arrive at login page")
+    public void checkLoginPage() {
+        String expectedHeader = "Pengelolaan Dana Pendidikan Sekolah Zaidan Educare";
+        String actualHeader = objLogin.getLoginHeader();
+        String expectedWelcome = "Selamat Datang";
+        String actualWelcome = objLogin.getWelcomeHeader();
+        Assertions.assertEquals(expectedHeader,actualHeader);
+        Assertions.assertEquals(expectedWelcome,actualWelcome);
     }
 
     @When("User enters username as {string} and password {string}")
@@ -27,9 +33,9 @@ public class LoginPage {
     }
 
     @Then("User should be see error message {string}")
-    public void get(String expectedName) {
-        String actualName = objLogin.getErrorMessage();
-        Assertions.assertEquals(actualName, expectedName);
+    public void get(String expectedMessage) {
+        String actualMessage = objLogin.getErrorMessage();
+        Assertions.assertEquals(actualMessage, expectedMessage);
     }
 
 
